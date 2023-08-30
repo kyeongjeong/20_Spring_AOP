@@ -10,6 +10,7 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 /*
@@ -114,6 +115,12 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect  // AOP 사용 클래스로 IoC컨테이너에 등록한다.
 public class Advice {
+	
+	/*
+	@Pointcut("execution(* work())") // 중복되는 execution 작성
+	public void work() {
+		// 특정의미가 없다.
+	}
 
 	// 메서드 호출 전
 	@Before("execution(* work())")
@@ -160,4 +167,5 @@ public class Advice {
 	public void getError() {
 		System.out.println("after throwing 메서드 호출");
 	}
+	*/
 }
